@@ -422,7 +422,7 @@ class CiscoUcsmDriver(object):
 
         eth_port_paths = []
         virtio_port_list = config.get_ucsm_eth_port_list(ucsm_ip)
-        eth_port_paths = ["%s%s" % (service_profile, ep)
+        eth_port_paths = ["%s%s" % (sp_template, ep)
             for ep in virtio_port_list]
         vlan_name = self.make_vlan_name(vlan_id)
 

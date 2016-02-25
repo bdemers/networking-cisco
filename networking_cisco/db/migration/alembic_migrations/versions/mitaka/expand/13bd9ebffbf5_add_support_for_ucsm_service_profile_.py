@@ -28,7 +28,6 @@ from alembic import op
 import sqlalchemy as sa
 
 
-
 def upgrade():
     op.create_table('ml2_ucsm_sp_templates',
         sa.Column('vlan_id', sa.Integer(), nullable=False),

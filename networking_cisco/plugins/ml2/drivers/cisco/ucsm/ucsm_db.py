@@ -113,7 +113,7 @@ class UcsmDbModel(object):
             # This VLAN is not being used on this SP Template.
             # This entry can be deleted.
             self.delete_sp_template_for_vlan(vlan_id, sp_template, ucsm_ip)
-            
+
         return entry
 
     def set_sp_template_updated(self, vlan_id, sp_template, device_id):

@@ -196,7 +196,7 @@ class UcsmConfig(object):
                 if not sp_template_path or not sep or not template_hosts:
                     raise cfg.Error(_('UCS Mech Driver: Invalid Service '
                                       'Profile Template config %s')
-                                      % sp_template_config)
+                                    % sp_template_config)
                 sp_temp, sep, hosts = template_hosts.partition(':')
                 LOG.debug('SD: SP Template Path: %s, SP Template: %s, '
                     'Hosts: %s', sp_template_path, sp_temp, hosts)
