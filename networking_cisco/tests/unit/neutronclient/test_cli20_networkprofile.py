@@ -22,8 +22,17 @@ from networking_cisco.neutronclient import networkprofile as np
 from neutronclient import shell
 from neutronclient.tests.unit import test_cli20
 
-
 class CLITestV20NetworkProfile(test_cli20.CLITestV20Base):
+
+    non_admin_status_resources = ['subnet', 'floatingip', 'security_group',
+                                  'security_group_rule', 'qos_queue',
+                                  'network_gateway', 'gateway_device',
+                                  'credential', 'network_profile',
+                                  'policy_profile', 'ikepolicy',
+                                  'ipsecpolicy', 'metering_label',
+                                  'metering_label_rule', 'net_partition',
+                                  'fox_socket', 'subnetpool',
+                                  'rbac_policy', 'address_scope']
 
     def setUp(self):
         self._mock_extension_loading()
